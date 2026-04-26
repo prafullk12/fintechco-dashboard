@@ -1,0 +1,51 @@
+{
+  "kpis": {
+    "totalVolume": 84200000,
+    "totalVolumeLabel": "$84.2M",
+    "transactions": 1240000,
+    "transactionsLabel": "1.24M",
+    "fraudRate": 0.031,
+    "fraudRateLabel": "0.031%",
+    "apiUptime": 99.97,
+    "apiUptimeLabel": "99.97%"
+  },
+  "monthlyVolume": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "digital": [4.1, 4.8, 5.2, 5.9, 6.3, 7.1, 7.8, 8.2, 7.6, 8.9, 9.4, 10.1],
+    "traditional": [2.8, 2.6, 3.1, 2.9, 3.3, 3.0, 3.4, 3.2, 3.6, 3.5, 3.8, 3.7],
+    "transactions_digital": [42, 49, 54, 61, 67, 74, 81, 87, 79, 93, 98, 106],
+    "transactions_traditional": [28, 26, 31, 29, 33, 30, 34, 32, 36, 35, 38, 37],
+    "revenue_digital": [1.2, 1.4, 1.6, 1.8, 1.9, 2.1, 2.3, 2.5, 2.3, 2.7, 2.9, 3.1],
+    "revenue_traditional": [0.8, 0.7, 0.9, 0.8, 1.0, 0.9, 1.0, 0.9, 1.1, 1.0, 1.1, 1.1]
+  },
+  "paymentMethods": {
+    "labels": ["ACH", "Cards", "Wire", "Crypto"],
+    "values": [41, 33, 15, 11],
+    "colors": ["#0F4C81", "#2E86C1", "#85C1E9", "#AED6F1"]
+  },
+  "regional": {
+    "labels": ["Northeast", "West", "Southeast", "Midwest", "Southwest"],
+    "volume": [24.1, 21.3, 17.8, 13.5, 7.5],
+    "growth": [8.2, 11.4, 6.9, 4.3, 9.1]
+  },
+  "recentTransactions": [
+    { "id": "TXN-98412", "merchant": "Stripe Payout", "method": "ACH", "amount": 142500.00, "type": "credit", "status": "completed", "time": "2 min ago", "region": "Northeast" },
+    { "id": "TXN-98411", "merchant": "PayPal Holdings", "method": "Wire", "amount": 890000.00, "type": "credit", "status": "completed", "time": "5 min ago", "region": "West" },
+    { "id": "TXN-98410", "merchant": "Coinbase Pro", "method": "Crypto", "amount": 34200.00, "type": "debit", "status": "completed", "time": "8 min ago", "region": "West" },
+    { "id": "TXN-98409", "merchant": "Chase Merchant", "method": "Cards", "amount": 5670.50, "type": "credit", "status": "completed", "time": "11 min ago", "region": "Southeast" },
+    { "id": "TXN-98408", "merchant": "Wells Fargo ACH", "method": "ACH", "amount": 28900.00, "type": "credit", "status": "pending", "time": "14 min ago", "region": "Midwest" },
+    { "id": "TXN-98407", "merchant": "Shopify Payments", "method": "Cards", "amount": 1230.75, "type": "debit", "status": "completed", "time": "17 min ago", "region": "Northeast" },
+    { "id": "TXN-98406", "merchant": "Square Capital", "method": "ACH", "amount": 67400.00, "type": "credit", "status": "completed", "time": "21 min ago", "region": "Southwest" },
+    { "id": "TXN-98405", "merchant": "Binance Transfer", "method": "Crypto", "amount": 12800.00, "type": "debit", "status": "flagged", "time": "25 min ago", "region": "West" },
+    { "id": "TXN-98404", "merchant": "Bank of America", "method": "Wire", "amount": 250000.00, "type": "credit", "status": "completed", "time": "29 min ago", "region": "Southeast" },
+    { "id": "TXN-98403", "merchant": "Adyen NV", "method": "Cards", "amount": 8920.00, "type": "credit", "status": "completed", "time": "33 min ago", "region": "Northeast" }
+  ],
+  "riskAlerts": [
+    { "id": "ALT-001", "severity": "critical", "title": "Velocity Spike Detected", "description": "Unusual transaction velocity from IP block 192.168.x.x — 340 txns in 4 minutes.", "time": "3 min ago", "category": "Fraud" },
+    { "id": "ALT-002", "severity": "high", "title": "Large Wire Flagged", "description": "Wire transfer of $2.1M to new beneficiary account pending compliance review.", "time": "18 min ago", "category": "Compliance" },
+    { "id": "ALT-003", "severity": "high", "title": "Crypto Threshold Exceeded", "description": "Single crypto wallet received >$50K in past hour — AML review triggered.", "time": "31 min ago", "category": "AML" },
+    { "id": "ALT-004", "severity": "medium", "title": "API Latency Elevated", "description": "ACH processing endpoint averaging 820ms — SLA threshold is 500ms.", "time": "47 min ago", "category": "Performance" },
+    { "id": "ALT-005", "severity": "medium", "title": "Card Decline Rate Up", "description": "Card decline rate increased to 4.2% in Southeast region (baseline 1.8%).", "time": "1 hr ago", "category": "Risk" },
+    { "id": "ALT-006", "severity": "low", "title": "Certificate Expiry", "description": "TLS certificate for api.fintechco.io expires in 14 days. Renewal recommended.", "time": "2 hr ago", "category": "Security" }
+  ]
+}
