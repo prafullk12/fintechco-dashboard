@@ -361,29 +361,6 @@
     </div>
   </div>
 
-  <!-- Fraud Rate Chart -->
-  <div class="section-label">Fraud Rate Trend</div>
-  <div class="card">
-    <div class="card-header">
-      <div>
-        <div class="card-title">Monthly Fraud Rate — 2024</div>
-        <div class="card-subtitle">% of transactions flagged as fraudulent · dashed line = 0.030% target threshold</div>
-      </div>
-      <div style="display:flex;gap:18px;align-items:center;font-size:12px;">
-        <span style="display:flex;align-items:center;gap:6px;color:var(--muted)">
-          <span style="display:inline-block;width:24px;height:3px;background:#0F4C81;border-radius:2px"></span>Below threshold
-        </span>
-        <span style="display:flex;align-items:center;gap:6px;color:var(--muted)">
-          <span style="display:inline-block;width:24px;height:3px;background:#A32D2D;border-radius:2px"></span>Above threshold
-        </span>
-        <span style="display:flex;align-items:center;gap:6px;color:var(--muted)">
-          <span style="display:inline-block;width:24px;height:2px;border-top:2px dashed #A32D2D"></span>Target (0.030%)
-        </span>
-      </div>
-    </div>
-    <canvas id="fraudChart" height="90"></canvas>
-  </div>
-
   <!-- Bottom Row -->
   <div class="section-label">Operations Overview</div>
   <div class="bottom-row">
@@ -456,7 +433,6 @@
     renderKPIs();
     renderBarChart('volume');
     renderDonut();
-    renderFraudChart();
     renderTransactions();
     renderRegional();
     renderAlerts();
@@ -578,78 +554,6 @@
         <span class="donut-label-val">${pm.values[i]}%</span>
       </div>
     `).join('');
-  }
-
-  // ── Fraud Rate Chart ──
-  function renderFraudChart() {
-    const { labels, values, threshold } = metrics.monthlyFraudRate;
-    const ABOVE = '#A32D2D';
-    const BELOW = '#0F4C81';
-    const ctx = document.getElementById('fraudChart').getContext('2d');
-
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels,
-        datasets: [
-          {
-            label: 'Fraud Rate',
-            data: values,
-            tension: 0.4,
-            borderWidth: 2.5,
-            pointRadius: 5,
-            pointHoverRadius: 7,
-            pointBackgroundColor: values.map(v => v > threshold ? ABOVE : BELOW),
-            pointBorderColor: '#fff',
-            pointBorderWidth: 2,
-            segment: {
-              borderColor: ctx => ctx.p0.parsed.y > threshold || ctx.p1.parsed.y > threshold ? ABOVE : BELOW,
-            },
-            fill: {
-              target: 1,
-              above: 'rgba(163,45,45,0.08)',
-              below: 'rgba(15,76,129,0.06)',
-            },
-          },
-          {
-            label: 'Target Threshold',
-            data: Array(labels.length).fill(threshold),
-            borderColor: '#A32D2D',
-            borderWidth: 1.5,
-            borderDash: [6, 4],
-            pointRadius: 0,
-            tension: 0,
-            fill: false,
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        interaction: { mode: 'index', intersect: false },
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: ctx => {
-                if (ctx.datasetIndex === 1) return ` Threshold: ${threshold}%`;
-                const v = ctx.parsed.y;
-                return ` Fraud Rate: ${v}% ${v > threshold ? '⚠ above target' : '✓ on target'}`;
-              }
-            }
-          }
-        },
-        scales: {
-          x: { grid: { display: false }, border: { display: false } },
-          y: {
-            grid: { color: '#EEF2F7' },
-            border: { display: false },
-            ticks: { callback: v => v + '%' },
-            min: 0.020,
-            max: 0.040,
-          }
-        }
-      }
-    });
   }
 
   // ── Transactions ──
