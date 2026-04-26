@@ -1,0 +1,12 @@
+[
+  { "id": "txn_001", "date": "2024-04-01", "type": "credit", "amount": 5200.00, "currency": "USD", "description": "Salary deposit", "category": "Income", "account": "checking" },
+  { "id": "txn_002", "date": "2024-04-02", "type": "debit", "amount": 120.50, "currency": "USD", "description": "Grocery Store", "category": "Food", "account": "checking" },
+  { "id": "txn_003", "date": "2024-04-03", "type": "debit", "amount": 45.00, "currency": "USD", "description": "Netflix Subscription", "category": "Entertainment", "account": "checking" },
+  { "id": "txn_004", "date": "2024-04-05", "type": "debit", "amount": 890.00, "currency": "USD", "description": "Rent Payment", "category": "Housing", "account": "checking" },
+  { "id": "txn_005", "date": "2024-04-07", "type": "credit", "amount": 300.00, "currency": "USD", "description": "Freelance payment", "category": "Income", "account": "checking" },
+  { "id": "txn_006", "date": "2024-04-08", "type": "debit", "amount": 65.20, "currency": "USD", "description": "Gas Station", "category": "Transport", "account": "checking" },
+  { "id": "txn_007", "date": "2024-04-10", "type": "debit", "amount": 200.00, "currency": "USD", "description": "Investment transfer", "category": "Investment", "account": "savings" },
+  { "id": "txn_008", "date": "2024-04-12", "type": "debit", "amount": 35.00, "currency": "USD", "description": "Gym Membership", "category": "Health", "account": "checking" },
+  { "id": "txn_009", "date": "2024-04-15", "type": "credit", "amount": 150.00, "currency": "USD", "description": "Dividend received", "category": "Income", "account": "investment" },
+  { "id": "txn_010", "date": "2024-04-18", "type": "debit", "amount": 320.75, "currency": "USD", "description": "Online Shopping", "category": "Shopping", "account": "checking" }
+]

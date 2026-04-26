@@ -1,0 +1,8 @@
+[
+  { "symbol": "AAPL", "name": "Apple Inc.", "shares": 15, "avgCost": 172.30, "currentPrice": 189.50, "value": 2842.50, "gainLoss": 258.00, "gainLossPct": 9.98 },
+  { "symbol": "MSFT", "name": "Microsoft Corp.", "shares": 10, "avgCost": 310.00, "currentPrice": 378.85, "value": 3788.50, "gainLoss": 688.50, "gainLossPct": 22.21 },
+  { "symbol": "GOOGL", "name": "Alphabet Inc.", "shares": 8, "avgCost": 135.20, "currentPrice": 158.40, "value": 1267.20, "gainLoss": 185.60, "gainLossPct": 17.16 },
+  { "symbol": "AMZN", "name": "Amazon.com Inc.", "shares": 12, "avgCost": 155.00, "currentPrice": 182.75, "value": 2193.00, "gainLoss": 333.00, "gainLossPct": 17.90 },
+  { "symbol": "TSLA", "name": "Tesla Inc.", "shares": 20, "avgCost": 220.50, "currentPrice": 175.20, "value": 3504.00, "gainLoss": -906.00, "gainLossPct": -20.54 },
+  { "symbol": "VTI", "name": "Vanguard Total Market ETF", "shares": 50, "avgCost": 210.00, "currentPrice": 238.60, "value": 11930.00, "gainLoss": 1430.00, "gainLossPct": 13.62 }
+]

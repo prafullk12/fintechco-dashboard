@@ -1,0 +1,30 @@
+[
+  {
+    "id": "acc_001",
+    "type": "checking",
+    "name": "Primary Checking",
+    "balance": 4269.55,
+    "currency": "USD",
+    "accountNumber": "****4821",
+    "bank": "FintechCo Bank"
+  },
+  {
+    "id": "acc_002",
+    "type": "savings",
+    "name": "High-Yield Savings",
+    "balance": 12450.00,
+    "currency": "USD",
+    "accountNumber": "****7763",
+    "bank": "FintechCo Bank",
+    "apy": 4.75
+  },
+  {
+    "id": "acc_003",
+    "type": "investment",
+    "name": "Brokerage Portfolio",
+    "balance": 38920.30,
+    "currency": "USD",
+    "accountNumber": "****2290",
+    "bank": "FintechCo Invest"
+  }
+]

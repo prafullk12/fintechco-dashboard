@@ -1,0 +1,16 @@
+{
+  "id": "user_001",
+  "name": "Alex Johnson",
+  "email": "alex.johnson@example.com",
+  "memberSince": "2021-03-15",
+  "plan": "Premium",
+  "netWorth": 55639.85,
+  "monthlyBudget": 3500.00,
+  "monthlySpend": 1675.45,
+  "creditScore": 762,
+  "goals": [
+    { "id": "goal_001", "name": "Emergency Fund", "target": 15000, "current": 12450, "deadline": "2024-09-01" },
+    { "id": "goal_002", "name": "Vacation to Europe", "target": 5000, "current": 2100, "deadline": "2024-12-01" },
+    { "id": "goal_003", "name": "New Car Down Payment", "target": 8000, "current": 3200, "deadline": "2025-06-01" }
+  ]
+}
