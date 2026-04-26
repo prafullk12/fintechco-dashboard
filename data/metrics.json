@@ -9,6 +9,11 @@
     "apiUptime": 99.97,
     "apiUptimeLabel": "99.97%"
   },
+  "monthlyFraudRate": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "values": [0.028, 0.025, 0.029, 0.032, 0.027, 0.031, 0.035, 0.033, 0.029, 0.034, 0.031, 0.028],
+    "threshold": 0.030
+  },
   "monthlyVolume": {
     "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     "digital": [4.1, 4.8, 5.2, 5.9, 6.3, 7.1, 7.8, 8.2, 7.6, 8.9, 9.4, 10.1],
